@@ -1,4 +1,4 @@
 public/*
 fixture/*
 !fixture/.gitkeep
-/logs
+/logs/**/*.log
