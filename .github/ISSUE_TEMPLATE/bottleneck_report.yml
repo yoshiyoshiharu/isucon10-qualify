@@ -1,7 +1,7 @@
 name: ボトルネックレポート
 description: ボトルネックレポート
 title: "[bottleneck]: "
-lables: ["bottleneck"]
+labels: ["bottleneck"]
 body:
   - type: input
     id: api-endpoint
