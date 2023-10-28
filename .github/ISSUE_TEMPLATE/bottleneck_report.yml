@@ -5,13 +5,22 @@ lables: ["bottleneck"]
 body:
   - type: input
     id: api-endpoint
-    label: APIエンドポイント
-    placeholder: ex) get '/api/v1/users'
+    attributes:
+      label: APIエンドポイント
+      placeholder: ex) get '/api/v1/users'
+    validations:
+      required: false
   - type: textarea
     id: neck-code
-    label: ボトルネックのコード
-    description: ボトルネックのコードを貼り付けてください（githubのpermalinkを貼ると良い）
+    attributes:
+      label: ボトルネックのコード
+      description: ボトルネックのコードを貼り付けてください（githubのpermalinkを貼ると良い）
+    validations:
+      required: false
   - type: textarea
     id: why-neck
-    label: 根拠
-    description: なぜボトルネックなのかを書いてください（mysqldumpslowの結果など）
+    attributes:
+      label: 根拠
+      description: なぜボトルネックなのかを書いてください（mysqldumpslowの結果など）
+    validations:
+      required: false
