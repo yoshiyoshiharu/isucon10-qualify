@@ -24,3 +24,10 @@ body:
       description: なぜボトルネックなのかを書いてください（mysqldumpslowの結果など）
     validations:
       required: false
+  - type: markdown
+    id: select-label
+    attributes:
+      label: 適切なラベルをつけてください
+      description: |
+        右のLabelsから適切なラベルをつけてください
+          - ex) `N+1`, `INDEX`, etc
