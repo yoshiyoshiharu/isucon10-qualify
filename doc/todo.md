@@ -36,7 +36,9 @@ OS、ミドルウェアの設定ファイルがある`/etc`もリポジトリに
 ## パスの一覧を共有
 
 ## スキーマ一覧を共有
-- SHOW TABLES;とDESCRIBE table_name;でテーブル構造を確認。
+- `SHOW TABLES;`でテーブル一覧を確認。
+- `DESCRIBE table_name;`でテーブル構造を確認。
+- `SHOW INDEX FROM table_name;`でテーブルのインデックスを確認。
 
 ## ハードウェアの構成を調べる、動作しているプロセスを確認
 - `lscpu`でCPUの情報を確認。
@@ -78,9 +80,11 @@ sudo systemctl restart mysql
 ```
 
 ```bash
-# s -c はクエリの実行回数でソート
+# -s c はクエリの実行回数でソート
+# -s at はクエリの平均実行時間でソート
 # -t 10 は上位10件を表示
 mysqldumpslow -s c -t 10 /var/log/mysql/mysql-slow.log 
+mysqldumpslow -s at -t 10 /var/log/mysql/mysql-slow.log
 ```
 
 ## 必要そうなINDEXを貼る
@@ -106,3 +110,9 @@ EXPLAIN SELECT * FROM `table_name`;
   - Slackだと流れるので、後から見返すのが大変なので、GitHubのissueにまとめておくと良い。
   - それか専用のチャンネルを作っておくと良い。
 
+## issueを作る
+
+- ラベルの候補
+  - `INDEX`: INDEXを貼る必要がある
+  - `N+1`: N+1問題がある
+  - `???`: 何が起きているのかわからない、その他
