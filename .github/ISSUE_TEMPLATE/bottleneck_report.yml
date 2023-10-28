@@ -27,7 +27,6 @@ body:
   - type: markdown
     id: select-label
     attributes:
-      label: 適切なラベルをつけてください
-      description: |
-        右のLabelsから適切なラベルをつけてください
-          - ex) `N+1`, `INDEX`, etc
+      value: |
+        - 右のLabelsから適切なラベルをつけてください
+        - ex) `N+1`, `INDEX`, etc
