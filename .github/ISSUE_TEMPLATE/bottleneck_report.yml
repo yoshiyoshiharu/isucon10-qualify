@@ -1,0 +1,17 @@
+name: ボトルネックレポート
+description: ボトルネックレポート
+title: "[bottleneck]: "
+lables: ["bottleneck"]
+body:
+  - type: input
+    id: api-endpoint
+    label: APIエンドポイント
+    placeholder: ex) get '/api/v1/users'
+  - type: textarea
+    id: neck-code
+    label: ボトルネックのコード
+    description: ボトルネックのコードを貼り付けてください（githubのpermalinkを貼ると良い）
+  - type: textarea
+    id: why-neck
+    label: 根拠
+    description: なぜボトルネックなのかを書いてください（mysqldumpslowの結果など）
