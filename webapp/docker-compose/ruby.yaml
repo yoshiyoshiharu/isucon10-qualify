@@ -28,6 +28,7 @@ services:
     volumes:
       - ../mysql/db:/mysql/db
       - ../fixture:/fixture
+      - ../ruby/:/app
     environment:
       MYSQL_DBNAME: isuumo
       MYSQL_USER: isucon
