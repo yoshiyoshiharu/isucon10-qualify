@@ -15,7 +15,7 @@ all: bench slow-query log-rotate
 # benchを実行
 .PHONY: bench
 bench:
-	cd $(APP_HOME)/bench && ./bench
+	cd $(APP_HOME)/bench && ./bench --target-url http://localhost:8080
 
 
 # slow-queryを解析し、テキストファイルに出力
