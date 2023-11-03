@@ -3,12 +3,12 @@ SSH接続の設定を統一。`Host isucon-server`といった形でSSH接続情
 
 ## GitHubに手軽にpushできるように、deploy keyをサーバー上のisuconユーザーに入れておく
 1. サーバーにSSHでログインし、isuconユーザーになる。
-2. ssh-keygenコマンドを実行して新しいSSHキーを生成。
+2. ssh-keygenコマンドを実行して新しいSSHキーを生成。(`~/.ssh/id_rsa.pub`で作成)
 ```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+ssh-keygen -t rsa -b 4096
 ```
-3. 生成された公開キー（通常は~/.ssh/id_rsa.pub）の内容をコピー。
-4. GitHubのリポジトリに移動し、Settings > Deploy keys から新しいkeyとして追加。
+3. 生成された公開キー（id_rsa.pub）の内容をコピー。
+4. GitHubのリポジトリに移動し、Settings > Deploy keys から新しいkeyとして追加。(Allow write accessにチェックを入れる)
 
 この設定により、サーバー上のisuconユーザーはこのSSHキーを使ってGitHubのリポジトリにpushやpullができるようになります。
 
