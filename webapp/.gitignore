@@ -2,3 +2,4 @@ public/*
 fixture/*
 !fixture/.gitkeep
 /logs/**/*.log
+/ruby/.env

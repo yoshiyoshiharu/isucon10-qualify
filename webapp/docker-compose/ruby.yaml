@@ -35,6 +35,7 @@ services:
       MYSQL_PASS: isucon
       MYSQL_HOST: mysql
       SERVER_PORT: 1323
+    env_file: ../ruby/.env
     ports:
       - "1323:1323"
     depends_on:
