@@ -26,7 +26,7 @@ ssh-keygen -t rsa -b 4096
 - `cd ${レポジトリのルートディレクトリ}`
 - `sudo cp -r /etc/nginx ./etc/nginx`でnginxの設定ファイルをコピー。
 - `sudo cp -r /etc/mysql ./etc/mysql`でMySQLの設定ファイルをコピー。
-- `chown -R isucon:isucon ./etc`でコピーした設定ファイルの所有者をisuconユーザーに変更。
+- `sudo chown -R isucon:isucon ./etc`でコピーした設定ファイルの所有者をisuconユーザーに変更。
 - `git add .`でステージング。
 - `git commit -m "add etc"`でコミット。
 - `git push`でリモートリポジトリにpush。
