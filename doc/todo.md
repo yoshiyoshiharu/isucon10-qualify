@@ -22,7 +22,7 @@ ssh-keygen -t rsa -b 4096
 - `git config --global user.name user-name`でユーザー名を設定。
 - `git config --global user.email user-email`でメールアドレスを設定。
 - `git commit -m "first commit"`でコミット。
-- `git remote add origin git@github.com:taiwork/test.git`でリモートリポジトリを追加。
+- `git remote add origin git@github.com:${user-name}/${repository-name}.git`でリモートリポジトリを追加。
 - `git push -u origin master`でコードをGitHubにpush。
 
 ## OS、ミドルウェアの設定ファイルがある`/etc`もリポジトリに含める。
