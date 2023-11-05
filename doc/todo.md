@@ -1,6 +1,9 @@
 ## 全員共通の~/.ssh/configを作る
 SSH接続の設定を統一。`Host isucon-server`といった形でSSH接続情報を~/.ssh/configに記述。
 
+## 全員分の~/.ssh/authroized_keysを作る
+- 3人分の公開鍵を`~/.ssh/authorized_keys`に追加。
+
 ## GitHubに手軽にpushできるように、deploy keyをサーバー上のisuconユーザーに入れておく
 1. サーバーにSSHでログインし、isuconユーザーになる。
 2. ssh-keygenコマンドを実行して新しいSSHキーを生成。(`~/.ssh/id_rsa.pub`で作成)
