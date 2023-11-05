@@ -15,10 +15,21 @@ ssh-keygen -t rsa -b 4096
 ## コードをリポジトリにpushする
 - `git init`でリポジトリを初期化。
 - `git add .`でコードをステージング。
+- `git config --global user.name user-name`でユーザー名を設定。
+- `git config --global user.email user-email`でメールアドレスを設定。
 - `git commit -m "first commit"`でコミット。
-- `git push origin master`でコードをGitHubにpush。
+- `git remote add origin git@github.com:taiwork/test.git`でリモートリポジトリを追加。
+- `git push -u origin master`でコードをGitHubにpush。
 
-OS、ミドルウェアの設定ファイルがある`/etc`もリポジトリに含める。（rootで）
+## OS、ミドルウェアの設定ファイルがある`/etc`もリポジトリに含める。
+
+- `cd ${レポジトリのルートディレクトリ}`
+- `sudo cp /etc/nginx ./etc/nginx`でnginxの設定ファイルをコピー。
+- `sudo cp /etc/mysql ./etc/mysql`でMySQLの設定ファイルをコピー。
+- `chown -R isucon:isucon ./etc`でコピーした設定ファイルの所有者をisuconユーザーに変更。
+- `git add .`でステージング。
+- `git commit -m "add etc"`でコミット。
+- `git push`でリモートリポジトリにpush。
 
 ## ローカルで開発環境を作れないか考えて、作れそうなら作る
 - Dockerを使ってローカルにMySQLやアプリケーションサーバーを立てる。
