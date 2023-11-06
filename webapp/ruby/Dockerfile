@@ -8,10 +8,10 @@ RUN apt-get update && \
 RUN mkdir /app
 COPY Gemfile Gemfile.lock /tmp/
 RUN cd /tmp && \
-  bundle config set deployment true && \
+  # bundle config set deployment true && \
   bundle config set path /gems && \
   bundle config set without 'development test' && \
-  bundle install -j4
+  bundle install -j4 --no-deployment
 
 ENV DOCKERIZE_VERSION v0.6.1
 RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
