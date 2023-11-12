@@ -97,7 +97,9 @@ sudo systemctl restart mysql
 ```bash
 # -s c はクエリの実行回数でソート
 # -s at はクエリの平均実行時間でソート
+# -s t はクエリの合計実行時間でソート
 # -t 10 は上位10件を表示
+mysqldumpslow -s t -t 10 /var/log/mysql/mysql-slow.log 
 mysqldumpslow -s c -t 10 /var/log/mysql/mysql-slow.log 
 mysqldumpslow -s at -t 10 /var/log/mysql/mysql-slow.log
 ```
